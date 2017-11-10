@@ -16,7 +16,7 @@ makeEngvallFunction = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       x[1]^4 + x[2]^4 + 2 * x[1]^2 * x[2]^2 - 4 * x[1] + 3
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-2000, -2000),

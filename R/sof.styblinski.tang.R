@@ -20,7 +20,7 @@ makeStyblinkskiTangFunction = function() {
       b = a^2
       return(0.5 * sum(b - 16 * a + 5 * x))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = rep(-5, 2L),

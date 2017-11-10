@@ -24,7 +24,7 @@
 #'   name = "My test function",
 #'   fn = function(x) c(sum(x^2), exp(x)),
 #'   n.objectives = 2L,
-#'   par.set = makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L)
+#'   par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L)
 #' )
 #' print(fn)
 #' @export

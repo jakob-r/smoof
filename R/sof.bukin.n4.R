@@ -19,7 +19,7 @@ makeBukinN4Function = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       100 * x[2]^2 + 0.01 * abs(x[1] + 10)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-15, -3),

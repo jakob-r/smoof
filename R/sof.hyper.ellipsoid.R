@@ -18,7 +18,7 @@ makeHyperEllipsoidFunction = function(dimensions) {
       n = length(x)
       sum(1:n * x^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-5.12, dimensions),

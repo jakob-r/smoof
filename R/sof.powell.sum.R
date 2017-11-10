@@ -22,7 +22,7 @@ makePowellSumFunction = function(dimensions) {
       a = (1:length(x)) + 1L
       sum(abs(x)^a)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-1, dimensions),

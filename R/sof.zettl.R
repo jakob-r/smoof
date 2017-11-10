@@ -16,7 +16,7 @@ makeZettlFunction = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       (x[1]^2 + x[2]^2 - 2 * x[1])^2 + 0.25 * x[1]
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-5, -5),

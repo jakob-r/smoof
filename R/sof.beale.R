@@ -20,7 +20,7 @@ makeBealeFunction = function() {
       c = b * x[2]
       (1.5 - x[1] + a)^2 + (2.25 - x[1] + b)^2 + (2.625 - x[1] + c)^2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-4.5, -4.5),

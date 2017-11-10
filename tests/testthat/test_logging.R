@@ -22,7 +22,7 @@ test_that("logging for simple functions works well", {
   # generate Sphere function
   for (dimension in c(1L, 2L, 5L, 10L)) {
     fn = makeSphereFunction(dimension = dimension)
-    par.ids = getParamIds(getParamSet(fn), with.nr = TRUE, repeated = TRUE)
+    par.ids = getParamSet(fn)$ids
 
     # add logger for both x and y values
     fn = addLoggingWrapper(fn, logg.x = TRUE)
@@ -64,7 +64,7 @@ test_that("logging for mixed function works well", {
       }
       return(x$x1 + x$x2 + 1L)
     },
-    par.set = makeParamSet(
+    par.set = ParamHelpers::makeParamSet(
       makeDiscreteParam("disc", values = letters[1:2]),
       makeNumericParam("x1"),
       makeNumericParam("x2", lower = 0, upper = 10)

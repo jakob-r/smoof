@@ -31,7 +31,7 @@ parameters. Default is \code{TRUE}.}
 
 \item{par.set}{[\code{\link[ParamHelpers]{ParamSet}}]\cr
 Parameter set describing different aspects of the objective function parameters, i.~e.,
-names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{makeParamSet}}
+names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{ParamHelpers::makeParamSet}}
 for further information.}
 
 \item{n.objectives}{[\code{integer(1)}]\cr
@@ -72,7 +72,7 @@ fn = makeMultiObjectiveFunction(
   name = "My test function",
   fn = function(x) c(sum(x^2), exp(x)),
   n.objectives = 2L,
-  par.set = makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L)
+  par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L)
 )
 print(fn)
 }

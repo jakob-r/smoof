@@ -14,7 +14,7 @@ makeStepN3Function = function(dimensions) {
     fn = function(x) {
       sum(floor(x^2))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-100, dimensions),

@@ -25,7 +25,7 @@ makeBrownFunction = function(dimensions) {
       b = x[i + 1]^2
       sum(a^(b + 1) + b^(a + 1))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-1, dimensions),

@@ -16,7 +16,7 @@
 #' fn = makeMultiObjectiveFunction(
 #'   name = "Testfun",
 #'   fn = function(x) c(sum(x^2), exp(sum(x^2))),
-#'   par.set = makeNumericParamSet(
+#'   par.set = ParamHelpers::makeNumericParamSet(
 #'     len = 10L, id = "a",
 #'     lower = rep(-1.5, 10L), upper = rep(1.5, 10L)
 #'   ),
@@ -67,7 +67,7 @@ mnof = function(name = NULL,
     description = description,
     fn = fn,
     has.simple.signature = TRUE, # numeric funs always have a simple signature
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = par.len,
       id = par.id,
       lower = par.lower,

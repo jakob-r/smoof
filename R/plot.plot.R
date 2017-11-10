@@ -101,7 +101,7 @@ plot2DNumeric = function(x,
   assertFlag(render.contours)
 
   par.set = ParamHelpers::getParamSet(x)
-  par.names = getParamIds(par.set, with.nr = TRUE, repeated = TRUE)
+  par.names = par.set$ids
 
   lower = getBounds(bound = getLower(par.set), default = -10L)
   upper = getBounds(bound = getUpper(par.set), default = 10L)

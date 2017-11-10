@@ -39,7 +39,7 @@
 #' fn = makeSingleObjectiveFunction(
 #'   name = "Sphere Function",
 #'   fn = function(x) sum(x^2),
-#'   par.set = makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L),
+#'   par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L),
 #'   global.opt.params = list(x = 0)
 #' )
 #' print(fn)
@@ -48,7 +48,7 @@
 #' fn.num2 = makeSingleObjectiveFunction(
 #'   name = "Numeric 2D",
 #'   fn = function(x) sum(x^2),
-#'   par.set = makeParamSet(
+#'   par.set = ParamHelpers::makeParamSet(
 #'     makeNumericParam("x1", lower = -5, upper = 5),
 #'     makeNumericParam("x2", lower = -10, upper = 20)
 #'   )
@@ -60,7 +60,7 @@
 #'   name = "Mixed 2D",
 #'   fn = function(x) x$num1^2 + as.integer(as.character(x$disc1) == "a"),
 #'   has.simple.signature = FALSE,
-#'   par.set = makeParamSet(
+#'   par.set = ParamHelpers::makeParamSet(
 #'     makeNumericParam("num1", lower = -5, upper = 5),
 #'     makeDiscreteParam("disc1", values = c("a", "b"))
 #'   ),
@@ -172,17 +172,16 @@ preprocessOptima = function(opt.params, fn, par.set, type) {
       } else {
         stopf("Parameter(s) for known %s optima must be passed as vector, list, matrix or data.frame.", type)
       }
-      colnames(opt.params) = getParamIds(par.set, with.nr = TRUE, repeated = TRUE)
+      colnames(opt.params) = par.set$ids
     }
     assertDataFrame(opt.params, ncols = n.params, col.names = "unique")
 
     # check if the passed parameters are indeed within the feasible region
-    lapply(1:nrow(opt.params), function(i) {
-      if (!isFeasible(par.set, ParamHelpers::dfRowToList(opt.params, par.set, i))) {
-        stopf("%s optimum out of bounds.", type)
-      }
-    })
-    if (!setequal(getParamIds(par.set, repeated = TRUE, with.nr = TRUE), colnames(opt.params))) {
+    if (!par.set$test(opt.params)) {
+      stopf("%s optimum out of bounds.", type)
+    }
+
+    if (!setequal(par.set$ids), colnames(opt.params)) {
       stopf("Names of passed %s optimum parameters do not match names in parameter set.", type)
     }
   }

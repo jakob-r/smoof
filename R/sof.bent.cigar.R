@@ -19,7 +19,7 @@ makeBentCigarFunction = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       x[1]^2 + 1e+06 * sum(x[2:dimensions]^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-100, dimensions),

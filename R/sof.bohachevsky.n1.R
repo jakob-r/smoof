@@ -23,7 +23,7 @@ makeBohachevskyN1Function = function(dimensions) {
       i = 1:(length(x) - 1)
       sum(x[i]^2 + 2 * x[i + 1]^2 - 0.3 * cos(3 * pi * x[i]) - 0.4 * cos(4 * pi * x[i + 1]) + 0.7)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-15, dimensions),

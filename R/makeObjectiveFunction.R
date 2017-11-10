@@ -12,7 +12,7 @@
 #   parameters. Default is \code{TRUE}.
 # @param par.set [\code{\link[ParamHelpers]{ParamSet}}]\cr
 #   Parameter set describing different ascpects of the target function parameters, i. e.,
-#   names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{makeParamSet}}
+#   names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{ParamHelpers::makeParamSet}}
 #   for further information.
 # @param n.objectives [\code{integer(1)}]\cr
 #   Number of objectives of the multi-objective function.
@@ -69,7 +69,7 @@ makeObjectiveFunction = function(
 
   # guess number of objectives
   if (is.null(n.objectives)) {
-    test.pars = sampleValue(par.set)
+    test.pars = par.set$sample
     test.res = do.call(fn, test.pars)
     n.objectives = length(test.res)
   }

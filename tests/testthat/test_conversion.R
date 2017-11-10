@@ -12,7 +12,7 @@ test_that("min<->max conversion works as expected", {
       fn = function(x) {
         return(x[[1]]^2)
       },
-      par.set = makeNumericParamSet("x", lower = -2, upper = 2),
+      par.set = ParamHelpers::makeNumericParamSet("x", lower = -2, upper = 2),
       has.simple.signature = FALSE
     )
   )

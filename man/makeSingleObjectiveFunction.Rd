@@ -36,7 +36,7 @@ accept matrix of parameters? Default is \code{FALSE}.}
 
 \item{par.set}{[\code{\link[ParamHelpers]{ParamSet}}]\cr
 Parameter set describing different aspects of the objective function parameters, i.~e.,
-names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{makeParamSet}}
+names, lower and/or upper bounds, types and so on. See \code{\link[ParamHelpers]{ParamHelpers::makeParamSet}}
 for further information.}
 
 \item{noisy}{[\code{logical(1)}]\cr
@@ -94,7 +94,7 @@ library(ggplot2)
 fn = makeSingleObjectiveFunction(
   name = "Sphere Function",
   fn = function(x) sum(x^2),
-  par.set = makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L),
+  par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -5L, upper = 5L),
   global.opt.params = list(x = 0)
 )
 print(fn)
@@ -103,7 +103,7 @@ print(autoplot(fn))
 fn.num2 = makeSingleObjectiveFunction(
   name = "Numeric 2D",
   fn = function(x) sum(x^2),
-  par.set = makeParamSet(
+  par.set = ParamHelpers::makeParamSet(
     makeNumericParam("x1", lower = -5, upper = 5),
     makeNumericParam("x2", lower = -10, upper = 20)
   )
@@ -115,7 +115,7 @@ fn.mixed = makeSingleObjectiveFunction(
   name = "Mixed 2D",
   fn = function(x) x$num1^2 + as.integer(as.character(x$disc1) == "a"),
   has.simple.signature = FALSE,
-  par.set = makeParamSet(
+  par.set = ParamHelpers::makeParamSet(
     makeNumericParam("num1", lower = -5, upper = 5),
     makeDiscreteParam("disc1", values = c("a", "b"))
   ),

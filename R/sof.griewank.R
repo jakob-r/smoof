@@ -24,7 +24,7 @@ makeGriewankFunction = function(dimensions) {
       b = prod(cos(x / sqrt(1:length(x))))
       return(a - b + 1)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-100, dimensions),

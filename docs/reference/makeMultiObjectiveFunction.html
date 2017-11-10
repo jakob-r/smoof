@@ -122,9 +122,9 @@ parameters. Default is <code>TRUE</code>.</p></td>
     </tr>
     <tr>
       <th>par.set</th>
-      <td><p>[<code><a href='http://www.rdocumentation.org/packages/ParamHelpers/topics/makeParamSet'>ParamSet</a></code>]
+      <td><p>[<code><a href='http://www.rdocumentation.org/packages/ParamHelpers/topics/ParamHelpers::makeParamSet'>ParamSet</a></code>]
 Parameter set describing different aspects of the objective function parameters, i.~e.,
-names, lower and/or upper bounds, types and so on. See <code><a href='http://www.rdocumentation.org/packages/ParamHelpers/topics/makeParamSet'>makeParamSet</a></code>
+names, lower and/or upper bounds, types and so on. See <code><a href='http://www.rdocumentation.org/packages/ParamHelpers/topics/ParamHelpers::makeParamSet'>makeParamSet</a></code>
 for further information.</p></td>
     </tr>
     <tr>
@@ -180,7 +180,7 @@ Optional reference point in the objective space, e.g., for hypervolume computati
   <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"My test function"</span>,
   <span class='kw'>fn</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>c</span>(<span class='fu'>sum</span>(<span class='no'>x</span>^<span class='fl'>2</span>), <span class='fu'>exp</span>(<span class='no'>x</span>)),
   <span class='kw'>n.objectives</span> <span class='kw'>=</span> <span class='fl'>2L</span>,
-  <span class='kw'>par.set</span> <span class='kw'>=</span> <span class='fu'>makeNumericParamSet</span>(<span class='st'>"x"</span>, <span class='kw'>len</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>lower</span> <span class='kw'>=</span> -<span class='fl'>5L</span>, <span class='kw'>upper</span> <span class='kw'>=</span> <span class='fl'>5L</span>)
+  <span class='kw'>par.set</span> <span class='kw'>=</span> <span class='fu'>ParamHelpers::makeNumericParamSet</span>(<span class='st'>"x"</span>, <span class='kw'>len</span> <span class='kw'>=</span> <span class='fl'>1L</span>, <span class='kw'>lower</span> <span class='kw'>=</span> -<span class='fl'>5L</span>, <span class='kw'>upper</span> <span class='kw'>=</span> <span class='fl'>5L</span>)
 )
 <span class='fu'>print</span>(<span class='no'>fn</span>)</div><div class='output co'>#&gt; Multi-objective function
 #&gt; Number of objectives: 2

@@ -11,7 +11,7 @@ makeMultiModFunction = function(dimensions) {
       a = abs(x)
       sum(a) * prod(a)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-10, dimensions),

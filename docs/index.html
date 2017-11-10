@@ -89,7 +89,7 @@ obj.fn =<span class="st"> </span><span class="kw"><a href="reference/makeRosenbr
 obj.fn =<span class="st"> </span><span class="kw"><a href="reference/makeSingleObjectiveFunction.html">makeSingleObjectiveFunction</a></span>(
   <span class="dt">name =</span> <span class="st">"My fancy function name"</span>,
   <span class="dt">fn =</span> function(x) x *<span class="st"> </span><span class="kw">sin</span>(<span class="dv">3</span>*x),
-  <span class="dt">par.set =</span> <span class="kw">makeNumericParamSet</span>(<span class="st">"x"</span>, <span class="dt">len =</span> 1L, <span class="dt">lower =</span> <span class="dv">0</span>, <span class="dt">upper =</span> <span class="dv">2</span> *<span class="st"> </span>pi)
+  <span class="dt">par.set =</span> <span class="kw">ParamHelpers::makeNumericParamSet</span>(<span class="st">"x"</span>, <span class="dt">len =</span> 1L, <span class="dt">lower =</span> <span class="dv">0</span>, <span class="dt">upper =</span> <span class="dv">2</span> *<span class="st"> </span>pi)
 )
 <span class="kw">print</span>(obj.fn)
 <span class="kw">print</span>(<span class="kw"><a href="reference/getParamSet.html">getParamSet</a></span>(obj.fn))

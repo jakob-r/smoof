@@ -30,7 +30,7 @@ makeBiSphereFunction = function(dimensions, a = rep(0, dimensions)) {
     id = paste0("bisphere_", dimensions, "d_2o"),
     description = "Bi-objective Sphere Function",
     fn = fn,
-    par.set =  makeNumericParamSet(
+    par.set =  ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

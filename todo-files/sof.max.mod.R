@@ -12,7 +12,7 @@ makeMaxModFunction = function(dimensions) {
     fn = function(x) {
       max(abs(x))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-10, dimensions),

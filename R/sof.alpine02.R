@@ -22,7 +22,7 @@ makeAlpine02Function = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       prod(sqrt(x) * sin(x))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

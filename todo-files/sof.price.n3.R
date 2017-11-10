@@ -18,7 +18,7 @@ makePriceN3Function = function() {
     fn = function(x) {
       100 * (x[2] - x[1]^2)^2 + (6.4 * (x[2] - 0.5)^2 - x[1] - 0.6)^2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-500, -500),

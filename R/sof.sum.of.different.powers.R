@@ -18,7 +18,7 @@ makeSumOfDifferentSquaresFunction = function(dimensions) {
       n = length(x)
       sum(abs(x)^(1:n + 1))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-1, dimensions),

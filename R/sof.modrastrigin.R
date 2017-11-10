@@ -26,7 +26,7 @@ makeModifiedRastriginFunction = function(dimensions, k = rep(1, dimensions)) {
       n = length(x)
       sum(10 * (1 + cos(2 * pi * k * x)) + 2 * k * x^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

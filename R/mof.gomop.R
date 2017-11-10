@@ -52,7 +52,7 @@ makeGOMOPFunction = function(dimensions = 2L, funs = list()) {
     id = collapse(sapply(funs, getID), sep = "_"),
     description = "GOMOP function",
     fn = fn,
-    par.set =  makeNumericParamSet(
+    par.set =  ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

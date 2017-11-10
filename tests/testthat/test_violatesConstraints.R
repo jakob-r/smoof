@@ -6,7 +6,7 @@ test_that("violatesConstraints", {
         fn = function(x) {
             sum(x^2)
         },
-        par.set = makeNumericParamSet("x", len = 2L, lower = -5, upper = 5),
+        par.set = ParamHelpers::makeNumericParamSet("x", len = 2L, lower = -5, upper = 5),
         constraint.fn = function(x) {
             c((x[1] + x[2]) < 1, (x[1] + x[2]) > -1)
         }

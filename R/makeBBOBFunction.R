@@ -36,7 +36,7 @@ makeBBOBFunction = function(dimension, fid, iid) {
   force(iid)
 
   # build parameter set (bounds are [-5, 5] for all BBOB funs)
-  par.set = makeNumericParamSet("x", len = dimension, lower = -5, upper = 5)
+  par.set = ParamHelpers::makeNumericParamSet("x", len = dimension, lower = -5, upper = 5)
 
   # get optimal values
   optimals = getOptimumForBBOBFunction(dimension, fid, iid)

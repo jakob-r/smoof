@@ -20,7 +20,7 @@ makeCsendesFunction = function(dimensions) {
     fn = function(x) {
       sum(x^6 * (2 + sin(1 / x)))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = c(-1, -1),

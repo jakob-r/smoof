@@ -17,7 +17,7 @@ makeJennrichSampsonFunction = function() {
       i = 1:10
       sum((2 + 2 * i - (exp(i * x[1]) + exp(i * x[2])))^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-1, -1),

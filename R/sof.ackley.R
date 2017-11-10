@@ -29,7 +29,7 @@ makeAckleyFunction = function(dimensions) {
       e = mean(cos(c * x))
       -a * exp(-b * sqrt(d)) - exp(e) + a + exp(1)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = -32.768,

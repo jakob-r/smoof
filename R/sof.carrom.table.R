@@ -18,7 +18,7 @@ makeCarromTableFunction = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       (-1 / 30) * exp(2 * abs(1 - (sqrt(x[1]^2 + x[2]^2) / pi))) * cos(x[1])^2 * cos(x[2])^2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-10, -10),

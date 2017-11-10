@@ -22,7 +22,7 @@ makeBirdFunction = function() {
       c = exp((1 - cos(x[2]))^2) * sin(x[1])
       return(a + b + c)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-2 * pi, -2 * pi),

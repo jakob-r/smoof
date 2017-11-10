@@ -190,7 +190,7 @@ Optional reference point in the objective space, e.g., for hypervolume computati
 <span class='no'>fn</span> <span class='kw'>=</span> <span class='fu'><a href='makeMultiObjectiveFunction.html'>makeMultiObjectiveFunction</a></span>(
   <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>"Testfun"</span>,
   <span class='kw'>fn</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>c</span>(<span class='fu'>sum</span>(<span class='no'>x</span>^<span class='fl'>2</span>), <span class='fu'>exp</span>(<span class='fu'>sum</span>(<span class='no'>x</span>^<span class='fl'>2</span>))),
-  <span class='kw'>par.set</span> <span class='kw'>=</span> <span class='fu'>makeNumericParamSet</span>(
+  <span class='kw'>par.set</span> <span class='kw'>=</span> <span class='fu'>ParamHelpers::makeNumericParamSet</span>(
     <span class='kw'>len</span> <span class='kw'>=</span> <span class='fl'>10L</span>, <span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"a"</span>,
     <span class='kw'>lower</span> <span class='kw'>=</span> <span class='fu'>rep</span>(-<span class='fl'>1.5</span>, <span class='fl'>10L</span>), <span class='kw'>upper</span> <span class='kw'>=</span> <span class='fu'>rep</span>(<span class='fl'>1.5</span>, <span class='fl'>10L</span>)
   ),

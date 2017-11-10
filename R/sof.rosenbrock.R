@@ -24,7 +24,7 @@ makeRosenbrockFunction = function(dimensions) {
       i = 1:(length(x) - 1L)
       sum(100 * (x[i]^2 - x[i + 1])^2 + (x[i] - 1)^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-5, dimensions),

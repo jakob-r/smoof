@@ -19,7 +19,7 @@ makePriceN1Function = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       sum((abs(x) - 5)^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-500, -500),

@@ -36,7 +36,7 @@ makeSwiler2014Function = function() {
       val = a + b + fac * sin(2 * pi * x3 - pi)
       return(val)
     },
-    par.set = makeParamSet(
+    par.set = ParamHelpers::makeParamSet(
       makeDiscreteParam("x1", values = c("1", "2", "3", "4", "5")),
       makeNumericParam("x2", lower = 0, upper = 1),
       makeNumericParam("x3", lower = 0, upper = 1)

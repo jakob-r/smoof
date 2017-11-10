@@ -21,7 +21,7 @@ makeSixHumpCamelFunction = function() {
       xx2 = x[2]^2
       (4 - 2.1 * xx1 + xx1^2 / 3) * xx1 + x[1] * x[2] + (4 * xx2 - 4) * xx2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-3, -2),

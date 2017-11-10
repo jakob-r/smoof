@@ -86,7 +86,7 @@ fn.mixed = makeSingleObjectiveFunction(
     }
   },
   has.simple.signature = FALSE,
-  par.set = makeParamSet(
+  par.set = ParamHelpers::makeParamSet(
     makeNumericParam("x1", lower = -5, upper = 5),
     makeNumericParam("x2", lower = -3, upper = 3),
     makeDiscreteParam("disc1", values = c("a", "b")),

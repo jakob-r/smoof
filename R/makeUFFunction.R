@@ -75,5 +75,5 @@ makeUFParamSet = function(id, dimensions) {
     lower = c(0, 0, rep(-2, dimensions - 2L))
     upper = c(1, 1, rep(2, dimensions - 2L))
   }
-  makeNumericParamSet("x", lower = lower, upper = upper, len = dimensions)
+  ParamHelpers::makeNumericParamSet("x", lower = lower, upper = upper, len = dimensions)
 }

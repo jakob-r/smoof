@@ -17,7 +17,7 @@ makeKeaneFunction = function() {
       b = sqrt(x[1]^2 + x[2]^2)
       return (a / b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(0, 0),

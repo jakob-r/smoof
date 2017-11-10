@@ -20,7 +20,7 @@ makeHansenFunction = function() {
       b = sum((j + 1) * cos((j + 2) * x[2] + j + 1))
       return (a * b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-10, -10),

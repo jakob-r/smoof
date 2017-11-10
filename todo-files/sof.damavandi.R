@@ -22,7 +22,7 @@ makeDamavandiFunction = function() {
       c = 2 + (x[1] - 7)^2 + 2 * (x[2] - 7)^2
       return ((a - b) * c)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(0, 0),

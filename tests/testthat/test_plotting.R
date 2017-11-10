@@ -4,7 +4,7 @@ test_that("autoplot functions for 1D numeric functions works as expected", {
 	fn = makeSingleObjectiveFunction(
 		name = "Test function",
 		fn = function(x) sum(x^2),
-		par.set = makeNumericParamSet("x", len = 1L, lower = -2, upper = 2),
+		par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -2, upper = 2),
     global.opt.value = 0,
     global.opt.param = 0
 	)
@@ -27,7 +27,7 @@ test_that("autoplot function for 2D numeric functions works as expected", {
 	fn = makeSingleObjectiveFunction(
 		name = "2d numeric",
 		fn = function(x) x[[1]]^2 + sin(2 * x[[2]]),
-		par.set = makeParamSet(
+		par.set = ParamHelpers::makeParamSet(
 			makeNumericParam("x1", lower = -4, upper = 4),
 			makeNumericParam("x2", lower = -4, upper = 4)
 		)
@@ -55,14 +55,14 @@ test_that("autoplot does not work for certain functions", {
 	fn1 = makeSingleObjectiveFunction(
 		name = "Function with high dimension",
 		fn = function(x) 1,
-		par.set = makeNumericParamSet("x", len = 3L)
+		par.set = ParamHelpers::makeNumericParamSet("x", len = 3L)
 	)
 
 	fn2 = makeSingleObjectiveFunction(
 		name = "Function with unmatching parameters",
 		fn = function(x) (as.character(x$disc1) == "a") + as.numeric(x$log1),
 		has.simple.signature = FALSE,
-		par.set = makeParamSet(
+		par.set = ParamHelpers::makeParamSet(
 			makeDiscreteParam("disc1", values = letters[1:3]),
 			makeLogicalParam("log1")
 		)
@@ -79,7 +79,7 @@ test_that("autoplot functions for mixed functions (discrete/logical and numeric 
 		name = fn.name,
 		fn = function(x) x$num1^2 + (as.character(x$disc1) == "a"),
 		has.simple.signature = FALSE,
-		par.set = makeParamSet(
+		par.set = ParamHelpers::makeParamSet(
 			makeNumericParam("num1", lower = -2, upper = 2),
 			makeDiscreteParam("disc1", values = c("a", "b"))
 		)
@@ -99,7 +99,7 @@ test_that("autoplot functions for mixed functions (discrete/logical and numeric 
         x$x[1] + x$x[2] - 10 * as.numeric(x$disc[2] == "a")
       }
     },
-    par.set = makeParamSet(
+    par.set = ParamHelpers::makeParamSet(
       makeDiscreteVectorParam("disc", len = 2L, values = c("a", "b")),
       makeNumericVectorParam("x", len = 2L, lower = c(-5, -3), upper = c(5, 3))
     ),
@@ -119,7 +119,7 @@ test_that("autoplot functions for mixed functions (discrete/logical and numeric 
       }
     },
     has.simple.signature = FALSE,
-    par.set = makeParamSet(
+    par.set = ParamHelpers::makeParamSet(
       makeNumericParam("x1", lower = -5, upper = 5),
       makeNumericParam("x2", lower = -3, upper = 3),
       makeDiscreteParam("disc1", values = c("a", "b")),

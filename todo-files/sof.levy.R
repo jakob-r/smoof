@@ -18,7 +18,7 @@ makeLevyFunction = function(dimensions) {
       c = (w[n] - 1)^2 * (1 + sin(2 * 3.1415 * w[n])^2)
       return(a + b + c)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-10, dimensions),

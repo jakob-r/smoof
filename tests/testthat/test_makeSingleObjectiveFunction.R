@@ -4,7 +4,7 @@ test_that("makeSingleObjectiveFunction", {
 	name = "Test function"
 	description = "Test function description"
 	tags = c("unimodal", "separable")
-	par.set = makeParamSet(
+	par.set = ParamHelpers::makeParamSet(
 		makeNumericParam("x1", lower = -5, upper = 5),
 		makeNumericParam("x2", lower = -5, upper = 5)
 	)
@@ -68,7 +68,7 @@ test_that("global optimum is provided properly", {
 		fn = makeSingleObjectiveFunction(
 			name = "My test function",
 			fn = function(x) x^2,
-			par.set = makeParamSet(
+			par.set = ParamHelpers::makeParamSet(
 				makeNumericParam("num1", lower = -10, upper = 10)
 			),
 			global.opt.params = global.opt.params
@@ -86,7 +86,7 @@ test_that("variants of global.opt.params work well", {
 		fn = makeSingleObjectiveFunction(
 			name = "My test function",
 			fn = function(x) sum(x^2),
-			par.set = makeParamSet(
+			par.set = ParamHelpers::makeParamSet(
 				makeNumericParam("x1", lower = -10, upper = 10),
 				makeNumericParam("x2", lower = -10, upper = 10)
 			),
@@ -121,7 +121,7 @@ test_that("noisy functions work well", {
       sum(x^2)
     },
     noisy = TRUE,
-    par.set = makeNumericParamSet("x", len = 1L, lower = -5, upper = 5)
+    par.set = ParamHelpers::makeNumericParamSet("x", len = 1L, lower = -5, upper = 5)
   )
   expect_true(isNoisy(fn))
   fn.mean = getMeanFunction(fn)

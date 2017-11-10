@@ -29,7 +29,7 @@ makeMOP3Function = function(dimensions = 2L) {
     id = sprintf("MOP3-%id-%io", dimensions, 2L),
     description = "MOP3 function",
     fn = fn,
-    par.set =  makeNumericParamSet(
+    par.set =  ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-pi, dimensions),

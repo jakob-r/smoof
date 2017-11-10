@@ -18,7 +18,7 @@ makeGeneralizedDropWaveFunction = function(dimensions = 2L) {
       a = sum(x^2)
       -(1 + cos(12 * sqrt(a))) / (0.5 * a + 2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-5.12, dimensions),

@@ -75,7 +75,7 @@ makeDTLZ1Function = function(dimensions, n.objectives) {
     id = paste0("dtlz1_", dimensions, "d_", n.objectives, "o"),
     description = "Deb et al.",
     fn = fn,
-    par.set =  makeNumericParamSet(
+    par.set =  ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       #FIXME: any box constraints?

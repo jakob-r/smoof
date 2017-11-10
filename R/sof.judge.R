@@ -21,7 +21,7 @@ makeJudgeFunction = function() {
       i = 1:20
       sum(((x[1] + B * x[2] + C * x[2]^2) - A)^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-10, -10),

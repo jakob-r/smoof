@@ -15,7 +15,7 @@ makeAMGMFunction = function(dimensions) {
     fn = function(x) {
       (mean(x) - prod(x)^(1 / length(x)))^2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

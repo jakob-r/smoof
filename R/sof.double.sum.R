@@ -21,7 +21,7 @@ makeDoubleSumFunction = function(dimensions) {
       # this is faster than the soobench C implementation
       sum(cumsum(x)^2)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-65.536, dimensions),

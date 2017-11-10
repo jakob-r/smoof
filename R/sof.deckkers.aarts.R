@@ -20,7 +20,7 @@ makeDeckkersAartsFunction = function() {
       b = x[2]^2
       1e+05 * a + b - (a + b)^2 + 1e-05 * (a + b)^4
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-20, -20),

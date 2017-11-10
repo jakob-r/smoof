@@ -72,7 +72,7 @@ makeHartmannFunction = function(dimensions) {
       inner = rowSums(A[, i] * (x.mat - P[, i])^2)
       -sum(alpha * exp(-inner))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = 0,

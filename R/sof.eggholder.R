@@ -18,7 +18,7 @@ makeEggholderFunction = function() {
       i = 1L
       sum(-(x[i + 1] + 47) * sin(sqrt(abs(x[i + 1] + 0.5 * x[i] + 47))) - x[i] * sin(sqrt(abs(x[i] - (x[i + 1] + 47)))))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-512, -512),

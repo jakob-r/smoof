@@ -31,7 +31,7 @@ makeKatsuuraFunction = function(dimensions, d = 32) {
       }
       return(r)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0, dimensions),

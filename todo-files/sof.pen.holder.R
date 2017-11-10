@@ -19,7 +19,7 @@ makePenHolderFunction = function() {
       b = abs(prod(cos(x)) * a)
       -exp(1 / b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-11, -11),

@@ -23,7 +23,7 @@ makeGoldsteinPriceFunction = function() {
       b = 30 + (2 * x[1] - 3 * x[2])^2 * (18 - 32 * x[1] + 12 * xx1 + 48 * x[2] - 36 * xx12 + 27 * xx2)
       return (a * b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-2, -2),

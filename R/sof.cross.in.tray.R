@@ -19,7 +19,7 @@ makeCrossInTrayFunction = function() {
       a = exp(abs(100 - (sqrt(x[1]^2 + x[2]^2) / pi)))
       -0.0001 * (abs(a * sin(x[1]) * sin(x[2])) + 1)^(0.1)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-15, -15),

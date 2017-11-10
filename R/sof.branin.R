@@ -31,7 +31,7 @@ makeBraninFunction = function() {
       f = 1 / (8 * pi)
       return (a * (x[2] - b * x[1]^2 + c * x[1] - d)^2 + e * (1 - f) * cos(x[1]) + e)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-5, 0),

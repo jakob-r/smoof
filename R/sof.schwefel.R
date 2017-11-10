@@ -22,7 +22,7 @@ makeSchwefelFunction = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       sum(-x * sin(sqrt(abs(x))))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-500, dimensions),

@@ -24,7 +24,7 @@ makeRastriginFunction = function(dimensions) {
       n = length(x)
       10 * n + sum(x^2 - 10 * cos(2 * pi * x))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-5.12, dimensions),

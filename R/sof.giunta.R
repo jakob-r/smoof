@@ -21,7 +21,7 @@ makeGiuntaFunction = function() {
       b = sin(a)
       0.6 + sum(b + b^2 + 0.02 * sin(4 * a))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = rep(-1, 2),

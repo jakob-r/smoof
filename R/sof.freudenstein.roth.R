@@ -17,7 +17,7 @@ makeFreudensteinRothFunction = function() {
       assertNumeric(x, len = 2L, any.missing = FALSE, all.missing = FALSE)
       (x[1] - 13 + ((5 - x[2]) * x[2] - 2) * x[2])^2 + (x[1] - 29 + ((x[2] + 1) * x[2] - 14) * x[2])^2
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-10, -10),

@@ -5,7 +5,7 @@ test_that("guessing n.objectives works", {
   fn = makeMultiObjectiveFunction(
     name = "testfun",
     fn = function(x) c(sum(x^2), sum(x^2), sum(x^2)),
-    par.set = makeNumericParamSet(len = 3L, lower = -5, upper = 5)
+    par.set = ParamHelpers::makeNumericParamSet(len = 3L, lower = -5, upper = 5)
   )
 
   expectIsSmoofFunction(fn, getID(fn))

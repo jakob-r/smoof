@@ -26,7 +26,7 @@ makeDixonPriceFunction = function(dimensions) {
       b = sum(i * (2 * x[i]^2 - x[i - 1])^2)
       return(a + b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-10, dimensions),

@@ -16,7 +16,7 @@
 #' fn = makeSingleObjectiveFunction(
 #'   name = "Testfun",
 #'   fn = function(x) sum(x^2),
-#'   par.set = makeNumericParamSet(
+#'   par.set = ParamHelpers::makeNumericParamSet(
 #'     len = 10L, id = "a",
 #'     lower = rep(-1.5, 10L), upper = rep(1.5, 10L)
 #'   )
@@ -70,7 +70,7 @@ snof = function(name = NULL,
     fn.mean = fn.mean,
     minimize = minimize,
     constraint.fn = constraint.fn,
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = par.len,
       id = par.id,
       lower = par.lower,

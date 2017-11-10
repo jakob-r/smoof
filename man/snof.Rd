@@ -100,7 +100,7 @@ of code.
 fn = makeSingleObjectiveFunction(
   name = "Testfun",
   fn = function(x) sum(x^2),
-  par.set = makeNumericParamSet(
+  par.set = ParamHelpers::makeNumericParamSet(
     len = 10L, id = "a",
     lower = rep(-1.5, 10L), upper = rep(1.5, 10L)
   )

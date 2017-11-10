@@ -21,7 +21,7 @@ makeExponentialFunction = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       -exp(-0.5 * sum(x^2))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-1, dimensions),

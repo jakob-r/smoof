@@ -20,7 +20,7 @@ makeShubertFunction = function() {
       b = sum(j * cos((j + 1) * x[2] + j))
       return (a * b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = 2L,
       id = "x",
       lower = c(-10, -10),

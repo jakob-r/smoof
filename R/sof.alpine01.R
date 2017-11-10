@@ -21,7 +21,7 @@ makeAlpine01Function = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       sum(abs(x * sin(x) + 0.1 * x))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-10, dimensions),

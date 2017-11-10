@@ -22,7 +22,7 @@ makeInvertedVincentFunction = function(dimensions) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       sum(sin(10 * log(x))) / length(x)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(0.25, dimensions),

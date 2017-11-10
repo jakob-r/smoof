@@ -14,7 +14,7 @@ makeStepN1Function = function(dimensions) {
     fn = function(x) {
       sum(floor(abs(x)))
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-100, dimensions),

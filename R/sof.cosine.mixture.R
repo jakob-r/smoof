@@ -23,7 +23,7 @@ makeCosineMixtureFunction = function(dimensions) {
       b = sum(x^2)
       return (a - b)
     },
-    par.set = makeNumericParamSet(
+    par.set = ParamHelpers::makeNumericParamSet(
       len = dimensions,
       id = "x",
       lower = rep(-1, dimensions),
